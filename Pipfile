@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+isort = {extras = ["pipfile"],version = "*"}
+pytest = "~=4.6"
+pytest-coverage = "*"
+flake8 = "*"
+flake8-mypy = "*"
+python-githooks = "*"
+
+[packages]
+
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+setup = "sh -c 'python -m python_githooks; mkdir -p ./.vscode/; cp .project_vscode_settings.json ./.vscode/settings.json'"
+test = "pytest -v"
+lint = "flake8 --mypy-config=.flake8"
+format = "sh -c 'black ./; isort -y'"

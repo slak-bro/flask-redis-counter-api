@@ -1,0 +1,12 @@
+[flake8]
+max-line-length = 100
+ignore =
+    E203, # See https://github.com/PyCQA/pycodestyle/issues/373
+    W503
+
+[mypy]
+disallow_untyped_defs=False
+check_untyped_defs=True
+
+# allow returning Any as a consequence of the options above
+warn_return_any=True
