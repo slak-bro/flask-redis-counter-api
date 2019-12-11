@@ -105,3 +105,5 @@ venv.bak/
 
 #Vscode config
 .vscode/*
+# No lock file to allow slightly different python versions
+Pipfile.lock
