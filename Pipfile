@@ -15,6 +15,8 @@ python-githooks = "*"
 [packages]
 connexion = {version = "~=2.3.0",extras = ["swagger-ui"]}
 redis = "~=3.3"
+gunicorn = "~=20.0"
+gevent = "~=1.4"
 
 [requires]
 python_version = "3.7"

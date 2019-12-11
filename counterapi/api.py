@@ -1,5 +1,11 @@
+from os import getenv
+
 import connexion
 
-app = connexion.FlaskApp(__name__)
+DEBUG = getenv("DEBUG", default=False)
+
+options = {"swagger_ui": DEBUG}
+app = connexion.FlaskApp(__name__, options=options)
 app.add_api("api_spec.yml")
-app.run(port=8080)
+if DEBUG:
+    app.run(debug=True)
