@@ -1,0 +1,29 @@
+openapi: "3.0.0"
+info:
+  title: Counter API
+  version: "0.1"
+  description: Increment and get the value of a counter
+
+paths:
+  /counter/increment:
+    post:
+      operationId: application.increment
+      summary: Increment the counter
+      responses:
+        200:
+          description: Ok
+  /counter:
+    get:
+      operationId: application.get_value
+      summary: Gather the counter value
+      responses:
+        200:
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: integer
+                    description: Counter value

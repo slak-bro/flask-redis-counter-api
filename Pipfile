@@ -13,7 +13,8 @@ flake8-mypy = "*"
 python-githooks = "*"
 
 [packages]
-
+connexion = {version = "~=2.3.0",extras = ["swagger-ui"]}
+redis = "~=3.3"
 
 [requires]
 python_version = "3.7"
