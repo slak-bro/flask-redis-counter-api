@@ -20,7 +20,7 @@
 
 - Format the code `pipenv run format`
 - Manually run the linter `pipenv run lint`
-- Manually the tests `pipenv run test`
+- Manually run the tests `pipenv run test`
 - Add a development package `pipenv install --dev <my-package>`
 - Add a production package `poetry install <my-package>`
 - Jump into the virtualenv to run custom commands `pipenv shell`
